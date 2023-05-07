@@ -11,3 +11,12 @@ void print_odd_even(int num){
         }
     }
 }
+
+/*
+- for文の書き方は，Pythonと同じである.
+- if文の書き方は，Pythonと同じである.
+- else if文は，Pythonではelif文である.
+- for (カウンタ変数の初期化; 継続条件; カウンタ変数の更新) {
+    繰り返し実行する文;
+}
+*/

@@ -1,3 +1,7 @@
+'''
+このプログラムは、PyCUDAの動作確認用のプログラムです。
+PyCUDAのインストールが正しく行われているかどうかを確認するために、このプログラムを実行してください。
+'''
 import numpy as np
 import pycuda.gpuarray as gpuarray
 from pycuda.elementwise import ElementwiseKernel
