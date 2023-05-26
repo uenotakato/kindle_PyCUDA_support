@@ -4,7 +4,6 @@ import numpy as np
 import pycuda.gpuarray as gpuarray
 from pycuda.compiler import SourceModule
 
-# GPUの初期化
 import pycuda.autoinit
 
 # コンパイル時に余計なメッセージを表示させないようにする
@@ -22,6 +21,8 @@ module = SourceModule("""
         }
     }
 """)
+
+
 
 # コンパイルしたコードからカーネルを得る
 plus_one_kernel = module.get_function("plus_one_kernel")
@@ -46,3 +47,10 @@ y = y_gpu.get()
 
 print("x :", x)
 print("y :", y)
+
+"""memo
+int i = threadIdx.x + blockDim.x * blockIdx.x;
+- threadIdx.x: ブロック内のスレッドのインデックス
+- blockDim.x: ブロック内のスレッド数
+- blockIdx.x: グリッド内のブロックのインデックス
+"""
